@@ -63,7 +63,6 @@
    **Related Repository**: [JetsonHacksNano CSI-Camera](https://github.com/JetsonHacksNano/CSI-Camera/tree/master)
 
 2. **Demo Setup**:
-   - Connect a USB camera or the Arducam IMX219 module for a live video feed.
    - Deploy the YOLOv5 Nano model to process the video stream in real-time.
    - Display detected objects with bounding boxes and labels on a connected monitor.
 
