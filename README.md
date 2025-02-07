@@ -92,3 +92,7 @@
    - **Visualization**:
       - Use side-by-side displays to show the live detection results for edge and cloud setups, highlighting the differences in latency and responsiveness.
 
+# Steps
+1. Implement just the demonstration
+2. Implement the specialization part
+3. Model inversion demonstration (Yuming)
