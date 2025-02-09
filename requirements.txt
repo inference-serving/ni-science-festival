@@ -1,0 +1,6 @@
+streamlit
+ollama
+torch
+opencv-python
+Pillow
+plotly
