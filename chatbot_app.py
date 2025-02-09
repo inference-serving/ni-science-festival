@@ -48,6 +48,11 @@ user_input = st.text_input("You:", "")
 
 # Buttons for start/stop
 if st.button("Start Chat"):
+    # Reset session state variables to clear previous results
+    st.session_state.chat_history = []
+    st.session_state.latency_data = []
+    st.session_state.energy_log = []
+
     if is_device and jtop is not None:
         st.session_state.jtop_monitor = jtop()
         st.session_state.jtop_monitor.start()
@@ -56,6 +61,7 @@ if st.button("Stop Chat"):
     if is_device and jtop is not None and st.session_state.jtop_monitor:
         st.session_state.jtop_monitor.close()
 
+    # Store the session data into cumulative logs
     if st.session_state.latency_data:
         st.session_state.cumulative_latency_data.extend(st.session_state.latency_data)
 
