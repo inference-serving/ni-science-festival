@@ -1,1 +1,6 @@
+Couldn't find '/home/3058740@eeecs.qub.ac.uk/.ollama/id_ed25519'. Generating new private key.
+Your new public key is: 
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBHCUWB9rcULNiyrTAuWPMEQ/AcZo/ZL/qNkv2AhnI24
+
 Error: listen tcp 127.0.0.1:11434: bind: address already in use
