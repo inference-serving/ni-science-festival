@@ -50,11 +50,10 @@ OLLAMA_PID=$!
 sleep 5
 echo "Ollama server started with PID: $OLLAMA_PID"
 
-# Step 9: Start the FastAPI cloud service
+# Step 9: Start the FastAPI cloud service in the foreground (logs will be shown)
 echo "Starting FastAPI cloud microservice..."
-nohup uvicorn cloud_chatbot_app:app --host 0.0.0.0 --port 8000 > fastapi_server.log 2>&1 &
+uvicorn cloud_chatbot_app:app --host 0.0.0.0 --port 8000 --reload --log-level info
 
-echo "Cloud microservice is running at http://$(curl -s ifconfig.me):8000"
-
-# Optional: Monitor logs
-echo "Use 'tail -f fastapi_server.log' to view FastAPI logs."
+# Cleanup will not occur here since we expect the cloud service to be long-running.
+# If you manually stop the FastAPI server (Ctrl+C), Ollama will still be running. You can stop it using:
+# kill $OLLAMA_PID
