@@ -4,16 +4,16 @@
 set -e
 
 # Step 1: Install necessary packages
-echo "Updating package lists..."
-sudo apt-get update
+# echo "Updating package lists..."
+# sudo apt-get update
 
 # Step 2: Install Python3 and pip if not installed
-echo "Installing Python3 and pip..."
-sudo apt-get install -y python3 python3-pip
+# echo "Installing Python3 and pip..."
+# sudo apt-get install -y python3 python3-pip
 
 # Step 3: Upgrade pip
-echo "Upgrading pip..."
-pip3 install --upgrade pip
+# echo "Upgrading pip..."
+# pip3 install --upgrade pip
 
 # Step 4: Install Ollama
 echo "Installing Ollama..."
@@ -24,8 +24,8 @@ else
 fi
 
 # Step 5: Install required Python libraries
-echo "Installing Python dependencies..."
-pip3 install -r requirements_cloud.txt
+# echo "Installing Python dependencies..."
+# pip3 install -r requirements_cloud.txt
 
 # Step 6: Configure firewalld to allow FastAPI port (8000)
 echo "Configuring firewalld rules..."
