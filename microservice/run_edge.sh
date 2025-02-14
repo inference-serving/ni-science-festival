@@ -1,0 +1,1 @@
+streamlit run edge_chatbot_app.py
