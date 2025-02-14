@@ -15,7 +15,7 @@ st.write("Compare response times and energy consumption for cloud and device dep
 if st.button("Clear Chat"):
     st.session_state.chat_history = []
     st.session_state.latency_data = []
-    st.experimental_rerun()
+    st.rerun()
 
 # Simplified model selection options
 model_options = {
