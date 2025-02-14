@@ -11,10 +11,16 @@ CLOUD_SERVER_URL = "http://192.5.86.154:8000/infer"
 st.title("NI Science Festival")
 st.write("Compare response times and energy consumption for cloud and device deployments, including network latency.")
 
+# Button to clear chat history and latency data
+if st.button("Clear Chat"):
+    st.session_state.chat_history = []
+    st.session_state.latency_data = []
+    st.experimental_rerun()
+
 # Simplified model selection options
 model_options = {
     'small (edge)': ('tinyllama', 'local'),
-    'large (edge)': ('llama2', 'local'),
+    # 'large (edge)': ('llama2', 'local'),
     'small (cloud)': ('tinyllama', 'cloud'),
     'large (cloud)': ('llama2', 'cloud')
 }

@@ -21,7 +21,7 @@ async def infer(request: RequestModel):
             options={'num_predict': request.max_tokens}
         )
         end_time = time.time()
-        
+        print(response)
         return {
             "model": request.model_name,
             "response": response['message']['content'],

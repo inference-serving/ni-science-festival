@@ -1,0 +1,1 @@
+streamlit run vision_app.py --server.port 8502
